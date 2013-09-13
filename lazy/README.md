@@ -1,4 +1,5 @@
 * 将命名的作用域包在 lambda 里来惰性地初始化。 
+
 ```ruby
 # 差劲
 class User < ActiveRecord::Base
@@ -15,4 +16,5 @@ class User < ActiveRecord::Base
 
   scope :with_orders, -> { joins(:orders).select('distinct(users.id)') }
 end
+
 ```
